@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="@string/Title"
         android:textSize="@dimen/title"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"

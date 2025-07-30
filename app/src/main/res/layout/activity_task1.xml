@@ -9,64 +9,73 @@
     android:background="@color/background_purple"
     >
 
+
     <TextView
         android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
+        android:layout_margin="@dimen/margin_between_elements"
         android:text="@string/welcome_massege"
+        android:textColor="@color/black"
         android:textSize="@dimen/title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.381"
-        android:layout_margin="@dimen/margin_between_elements"/>
+        app:layout_constraintVertical_bias="0.226" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_between_elements"
+        android:layout_marginTop="144dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/btnBackMainActivity"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="@id/btnBackMainActivity"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_between_elements"
+            android:hint="@string/message"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            app:layout_constraintBaseline_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnShare"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_between_elements"
+            android:backgroundTint="@color/button_blue"
+            android:text="@string/share"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/etMessage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/etMessage"
+            app:layout_constraintTop_toTopOf="@id/etMessage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnBackMainActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_between_elements"
-        android:text="Main Activity"
-        android:textSize="@dimen/heading"
+        android:layout_marginTop="40dp"
         android:backgroundTint="@color/button_blue"
-        app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+        android:text="@string/main_activity"
+        android:textSize="@dimen/heading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tvWelcome"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="@id/tvWelcome"
-        app:layout_constraintEnd_toEndOf="@id/tvWelcome"/>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/btnBackMainActivity"
-        app:layout_constraintEnd_toEndOf="@id/btnBackMainActivity"
-        app:layout_constraintTop_toBottomOf="@id/btnBackMainActivity">
-
-        <EditText
-            android:id="@+id/etMessage"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintBaseline_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btnShare"
-            android:layout_margin="@dimen/margin_between_elements"
-            android:textColor="@color/white"
-            android:hint="@string/message"
-            />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnShare"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:backgroundTint="@color/button_blue"
-            android:text="@string/share"
-            android:textSize="18sp"
-            app:layout_constraintStart_toEndOf="@id/etMessage"
-            android:layout_margin="@dimen/margin_between_elements"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

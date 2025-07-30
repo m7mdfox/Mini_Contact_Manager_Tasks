@@ -2,6 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="background_purple">#9C27B0</color>
-    <color name="button_blue">#05126A</color>
+<!--    <color name="background_purple">#9C27B0</color>-->
+    <color name="background_purple">#E0F2F1</color>
+<!--    <color name="button_blue">#05126A</color>-->
+    <color name="button_blue">#009688</color>
+    <color name="grey">#808080</color>
 </resources>

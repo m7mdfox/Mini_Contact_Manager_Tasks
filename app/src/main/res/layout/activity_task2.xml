@@ -5,6 +5,86 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/margin_between_elements"
+    android:background="@color/background_purple"
     tools:context=".Task2Activity">
+
+    <LinearLayout
+        android:id="@+id/llContainer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="4dp"
+            app:cardPreventCornerOverlap="false"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/ivContactImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/myself"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mohamed_mostafa"
+            android:textColor="@color/black"
+            android:textSize="@dimen/title"
+            android:layout_margin="@dimen/margin_between_elements"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/llContainer1"
+        app:layout_constraintStart_toStartOf="@id/llContainer1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="@dimen/margin_between_elements">
+
+        <EditText
+            android:id="@+id/etNewName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/new_name"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:textSize="@dimen/heading"
+            android:layout_margin="@dimen/margin_between_elements"
+            app:layout_constraintEnd_toStartOf="@id/btnSave"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/heading"
+            android:text="@string/save"
+            android:backgroundTint="@color/button_blue"
+            android:layout_margin="@dimen/margin_between_elements"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

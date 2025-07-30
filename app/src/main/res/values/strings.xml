@@ -7,4 +7,8 @@
     <string name="welcome_massege">Welcome, Mr User!</string>
     <string name="share">Share</string>
     <string name="message">Message</string>
+    <string name="save">Save</string>
+    <string name="new_name">New Name</string>
+    <string name="mohamed_mostafa">Mohamed Mostafa</string>
+    <string name="main_activity">Main Activity</string>
 </resources>
