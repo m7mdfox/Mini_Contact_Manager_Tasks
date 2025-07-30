@@ -11,4 +11,6 @@
     <string name="new_name">New Name</string>
     <string name="mohamed_mostafa">Mohamed Mostafa</string>
     <string name="main_activity">Main Activity</string>
+    <string name="don_t_waste_your_time">Don\'t Waste your Time</string>
+    <string name="oops_the_task_was_removed">Oops the Task Was Removed!</string>
 </resources>

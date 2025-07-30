@@ -8,29 +8,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
+class Task3Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_task3)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val btnTask1 = findViewById<Button>(R.id.btn_task1)
-        btnTask1.setOnClickListener {
-            val intent = Intent(this,Task1Activity::class.java)
-            startActivity(intent)
-        }
-        val btnTask2 = findViewById<Button>(R.id.btn_task2)
-        btnTask2.setOnClickListener {
-            val intent = Intent(this,Task2Activity::class.java)
-            startActivity(intent)
-        }
-        val btnTask3 = findViewById<Button>(R.id.btn_task3)
-        btnTask3.setOnClickListener {
-            val intent = Intent(this,Task3Activity::class.java)
+
+        val btnBack = findViewById<Button>(R.id.btnBack)
+        btnBack.setOnClickListener {
+            val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
         }
 
